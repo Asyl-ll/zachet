@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>SQL School Tasks</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+    margin:0;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+details{
+    background:#1e293b;
+    margin:15px 0;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.4);
+}
+
+summary{
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    color:#38bdf8;
+}
+
+pre{
+    background:#111827;
+    color:#00ff88;
+    padding:12px;
+    border-radius:8px;
+    overflow-x:auto;
+}
+
+ol{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:12px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>📘 SQL Practice Tasks</h1>
+<details open>
+<summary>SELECT + WHERE + BETWEEN + IN (1-30)</summary>
+<ol>
+<li><pre>SELECT esimi FROM Students WHERE sinibi="10A";</pre></li>
+<li><pre>SELECT esimi,jinagan_ball FROM Students WHERE tandau_pani="Математика";</pre></li>
+<li><pre>SELECT * FROM Students WHERE jinagan_ball BETWEEN 80 AND 90;</pre></li>
+<li><pre>SELECT esimi,sinibi FROM Students WHERE jinisi='M';</pre></li>
+<li><pre>SELECT jinagan_ball FROM Students WHERE jinisi='F';</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE sinibi='9A' OR sinibi='10B';</pre></li>
+<li><pre>SELECT * FROM Students WHERE tandau_pani='Физика' OR tandau_pani='Химия';</pre></li>
+<li><pre>SELECT esimi,tandau_pani FROM Students WHERE jinagan_ball>85;</pre></li>
+<li><pre>SELECT sinibi FROM Students WHERE jinagan_ball BETWEEN 70 AND 75;</pre></li>
+<li><pre>SELECT esimi,sinibi FROM Students WHERE tandau_pani='Информатика';</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE jinisi='F' AND sinibi='11A';</pre></li>
+<li><pre>SELECT * FROM Students WHERE jinisi='M' AND sinibi='10C';</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE jinagan_ball BETWEEN 90 AND 100;</pre></li>
+<li><pre>SELECT * FROM Students WHERE tandau_pani='Математика' OR tandau_pani='Биология';</pre></li>
+<li><pre>SELECT esimi,jinagan_ball FROM Students WHERE sinibi='9B';</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE jinagan_ball&lt;80;</pre></li>
+<li><pre>SELECT * FROM Students WHERE sinibi='11B' OR sinibi='11C';</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE tandau_pani='Химия' AND jinisi='F';</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE tandau_pani='Физика' AND jinisi='M';</pre></li>
+<li><pre>SELECT esimi,sinibi FROM Students WHERE jinagan_ball BETWEEN 85 AND 95;</pre></li>
+<li><pre>SELECT * FROM Students WHERE tandau_pani='Информатика' OR tandau_pani='Математика';</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE sinibi='9A' AND jinisi='F';</pre></li>
+<li><pre>SELECT jinagan_ball FROM Students WHERE sinibi='10B' AND jinisi='M';</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE jinagan_ball BETWEEN 75 AND 85;</pre></li>
+<li><pre>SELECT esimi,sinibi FROM Students WHERE tandau_pani='Биология';</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE sinibi='11A' OR sinibi='11B';</pre></li>
+<li><pre>SELECT * FROM Students WHERE jinagan_ball&lt;90;</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE jinagan_ball BETWEEN 95 AND 100;</pre></li>
+<li><pre>SELECT * FROM Students WHERE tandau_pani IN ('Математика','Физика','Химия');</pre></li>
+<li><pre>SELECT esimi,jinagan_ball FROM Students WHERE sinibi='9C';</pre></li>
+</ol>
+</details>
+<details>
+<summary>ALTER TABLE (1-30)</summary>
+<ol>
+<li><pre>ALTER TABLE Students ADD birth_date DATE;</pre></li>
+<li><pre>ALTER TABLE Students MODIFY esimi VARCHAR(100);</pre></li>
+<li><pre>ALTER TABLE Students ADD email VARCHAR(100);</pre></li>
+<li><pre>ALTER TABLE Students MODIFY jinisi VARCHAR(10);</pre></li>
+<li><pre>ALTER TABLE Students ADD phone_number VARCHAR(20);</pre></li>
+<li><pre>ALTER TABLE Students MODIFY jinagan_ball FLOAT;</pre></li>
+<li><pre>ALTER TABLE Students ADD address VARCHAR(200);</pre></li>
+<li><pre>ALTER TABLE Students CHANGE sinibi class_name VARCHAR(10);</pre></li>
+<li><pre>ALTER TABLE Students ADD created_at TIMESTAMP;</pre></li>
+<li><pre>ALTER TABLE Students CHANGE tandau_pani subject VARCHAR(15);</pre></li>
+<li><pre>ALTER TABLE Students ADD gender VARCHAR(10);</pre></li>
+<li><pre>ALTER TABLE Students DROP jinisi;</pre></li>
+<li><pre>ALTER TABLE Students ADD grade CHAR(2);</pre></li>
+<li><pre>ALTER TABLE Students MODIFY esimi VARCHAR(100) NOT NULL;</pre></li>
+<li><pre>ALTER TABLE Students ADD scholarship BOOLEAN;</pre></li>
+<li><pre>ALTER TABLE Students MODIFY jinagan_ball FLOAT NOT NULL;</pre></li>
+<li><pre>ALTER TABLE Students ADD guardian_name VARCHAR(50);</pre></li>
+<li><pre>ALTER TABLE Students MODIFY id BIGINT;</pre></li>
+<li><pre>ALTER TABLE Students ADD national_id VARCHAR(12);</pre></li>
+<li><pre>ALTER TABLE Students MODIFY subject VARCHAR(100);</pre></li>
+<li><pre>ALTER TABLE Students ADD gpa DECIMAL(3,2);</pre></li>
+<li><pre>ALTER TABLE Students CHANGE class_name section VARCHAR(10);</pre></li>
+<li><pre>ALTER TABLE Students ADD enrollment_year INT;</pre></li>
+<li><pre>ALTER TABLE Students DROP address;</pre></li>
+<li><pre>ALTER TABLE Students ADD status VARCHAR(20);</pre></li>
+<li><pre>ALTER TABLE Students CHANGE phone_number contact_number VARCHAR(20);</pre></li>
+<li><pre>ALTER TABLE Students ADD graduate BOOLEAN;</pre></li>
+<li><pre>ALTER TABLE Students MODIFY gpa FLOAT;</pre></li>
+<li><pre>ALTER TABLE Students ADD notes TEXT;</pre></li>
+<li><pre>ALTER TABLE Students DROP guardian_name;</pre></li>
+</ol>
+</details>
+<details>
+<summary>LIKE (1-10)</summary>
+<ol>
+<li><pre>SELECT esimi FROM Students WHERE esimi LIKE 'а%';</pre></li>
+<li><pre>SELECT * FROM Students WHERE esimi LIKE '%жан%';</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE esimi LIKE '%нұр%';</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE esimi LIKE '%а';</pre></li>
+<li><pre>SELECT * FROM Students WHERE esimi LIKE '%гүл%';</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE esimi LIKE 'Ж%';</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE esimi LIKE '%р';</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE esimi LIKE '%ай%';</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE esimi LIKE 'с%к';</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE esimi LIKE '%дан%';</pre></li>
+</ol>
+</details>
+<details>
+<summary>ORDER BY + WHERE (1-10)</summary>
+<ol>
+<li><pre>SELECT esimi, jinagan_ball FROM Students WHERE sinibi='10A' ORDER BY jinagan_ball ASC;</pre></li>
+<li><pre>SELECT esimi, jinagan_ball FROM Students WHERE tandau_pani='Математика' ORDER BY jinagan_ball DESC;</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE jinagan_ball>80 ORDER BY esimi ASC;</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE jinisi='M' ORDER BY jinagan_ball;</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE jinisi='F' ORDER BY sinibi;</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE sinibi='9A' ORDER BY jinagan_ball;</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE tandau_pani='Физика' ORDER BY jinagan_ball;</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE jinagan_ball BETWEEN 85 AND 95 ORDER BY sinibi;</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE tandau_pani='Химия' ORDER BY esimi;</pre></li>
+<li><pre>SELECT esimi FROM Students WHERE tandau_pani='Биология' ORDER BY jinagan_ball DESC;</pre></li>
+</ol>
+</details>
+<details>
+<summary>GROUP BY (1-10)</summary>
+<ol>
+<li><pre>SELECT tandau_pani, AVG(jinagan_ball) FROM Students GROUP BY tandau_pani HAVING AVG(jinagan_ball)>85;</pre></li>
+<li><pre>SELECT sinibi FROM Students GROUP BY sinibi HAVING COUNT(id)>3;</pre></li>
+<li><pre>SELECT tandau_pani FROM Students GROUP BY tandau_pani HAVING MAX(jinagan_ball)>95;</pre></li>
+<li><pre>SELECT sinibi FROM Students WHERE jinisi='F' GROUP BY sinibi HAVING COUNT(id)>2;</pre></li>
+<li><pre>SELECT tandau_pani FROM Students GROUP BY tandau_pani HAVING AVG(jinagan_ball)<80;</pre></li>
+<li><pre>SELECT sinibi FROM Students WHERE jinisi='M' GROUP BY sinibi HAVING COUNT(id)<2;</pre></li>
+<li><pre>SELECT tandau_pani FROM Students GROUP BY tandau_pani HAVING COUNT(id)>5;</pre></li>
+<li><pre>SELECT sinibi FROM Students GROUP BY sinibi HAVING AVG(jinagan_ball)>85;</pre></li>
+<li><pre>SELECT tandau_pani FROM Students GROUP BY tandau_pani HAVING MIN(jinagan_ball)<75;</pre></li>
+<li><pre>SELECT sinibi FROM Students GROUP BY sinibi HAVING SUM(jinagan_ball)>250;</pre></li>
+</ol>
+</details>
+<details>
+<summary>INNER JOIN (1-10)</summary>
+<ol>
+<li><pre>SELECT Students.esimi, Students.tandau_pani, Teachers.teacher_name FROM Students INNER JOIN Teachers ON Students.tandau_pani=Teachers.subject;</pre></li>
+<li><pre>SELECT Students.esimi, Students.tandau_pani, Teachers.teacher_name FROM Students INNER JOIN Teachers ON Students.tandau_pani=Teachers.subject WHERE Students.tandau_pani='Математика';</pre></li>
+<li><pre>SELECT Students.esimi, Students.tandau_pani, Teachers.teacher_name FROM Students INNER JOIN Teachers ON Students.tandau_pani=Teachers.subject WHERE Students.tandau_pani='Физика';</pre></li>
+<li><pre>SELECT Students.esimi, Students.tandau_pani, Teachers.teacher_name FROM Students INNER JOIN Teachers ON Students.tandau_pani=Teachers.subject WHERE Students.tandau_pani='Химия';</pre></li>
+<li><pre>SELECT Students.esimi, Students.tandau_pani, Teachers.teacher_name FROM Students INNER JOIN Teachers ON Students.tandau_pani=Teachers.subject WHERE Students.tandau_pani='Биология';</pre></li>
+<li><pre>SELECT Students.esimi, Students.tandau_pani, Teachers.teacher_name FROM Students INNER JOIN Teachers ON Students.tandau_pani=Teachers.subject WHERE Students.tandau_pani='Информатика';</pre></li>
+<li><pre>SELECT Students.esimi,Teachers.teacher_name FROM Students INNER JOIN Teachers ON Students.tandau_pani=Teachers.subject WHERE Students.jinagan_ball>90;</pre></li>
+<li><pre>SELECT Students.esimi,Teachers.teacher_name FROM Students INNER JOIN Teachers ON Students.tandau_pani=Teachers.subject WHERE Students.sinibi='9A';</pre></li>
+<li><pre>SELECT Students.esimi,Students.tandau_pani, Teachers.teacher_name FROM Students INNER JOIN Teachers ON Students.tandau_pani=Teachers.subject WHERE Students.jinisi='F';</pre></li>
+<li><pre>SELECT Students.esimi,Students.tandau_pani, Teachers.teacher_name FROM Students INNER JOIN Teachers ON Students.tandau_pani=Teachers.subject WHERE Students.jinisi='M';</pre></li>
+</ol>
+</details>
+<details>
+<summary>LEFT JOIN (1-10)</summary>
+<ol>
+<li><pre>SELECT Students.esimi, Teachers.teacher_name FROM Students LEFT JOIN Teachers ON Students.tandau_pani=Teachers.subject;</pre></li>
+<li><pre>SELECT Students.esimi, Teachers.teacher_name FROM Students LEFT JOIN Teachers ON Students.tandau_pani=Teachers.subject WHERE Students.sinibi='10A';</pre></li>
+<li><pre>SELECT Students.esimi, Teachers.teacher_name FROM Students LEFT JOIN Teachers ON Students.tandau_pani=Teachers.subject WHERE Students.tandau_pani='Математика';</pre></li>
+<li><pre>SELECT Students.esimi, Teachers.teacher_name FROM Students LEFT JOIN Teachers ON Students.tandau_pani=Teachers.subject WHERE Students.tandau_pani='Физика';</pre></li>
+<li><pre>SELECT Students.esimi, Teachers.teacher_name FROM Students LEFT JOIN Teachers ON Students.tandau_pani=Teachers.subject WHERE Students.tandau_pani='Химия';</pre></li>
+<li><pre>SELECT Students.esimi, Teachers.teacher_name FROM Students LEFT JOIN Teachers ON Students.tandau_pani=Teachers.subject WHERE Students.tandau_pani='Биология';</pre></li>
+<li><pre>SELECT Students.esimi, Teachers.teacher_name FROM Students LEFT JOIN Teachers ON Students.tandau_pani=Teachers.subject WHERE Students.tandau_pani='Информатика';</pre></li>
+<li><pre>SELECT Students.esimi, Teachers.teacher_name FROM Students LEFT JOIN Teachers ON Students.tandau_pani=Teachers.subject WHERE Students.jinagan_ball>90;</pre></li>
+<li><pre>SELECT Students.esimi, Teachers.teacher_name FROM Students LEFT JOIN Teachers ON Students.tandau_pani=Teachers.subject WHERE Students.jinisi='F';</pre></li>
+<li><pre>SELECT Students.esimi, Teachers.teacher_name FROM Students LEFT JOIN Teachers ON Students.tandau_pani=Teachers.subject WHERE Students.jinisi='M';</pre></li>
+</ol>
+</details>
+<details>
+<summary>RIGHT JOIN (1-10)</summary>
+<ol>
+<li><pre>SELECT Teachers.teacher_name,Students.esimi FROM Teachers RIGHT JOIN Students ON Students.tandau_pani=Teachers.subject;</pre></li>
+<li><pre>SELECT Teachers.teacher_name,Students.esimi FROM Teachers RIGHT JOIN Students ON Students.tandau_pani=Teachers.subject WHERE Teachers.subject='Математика';</pre></li>
+<li><pre>SELECT Teachers.teacher_name,Students.esimi FROM Teachers RIGHT JOIN Students ON Students.tandau_pani=Teachers.subject WHERE Teachers.subject='Физика';</pre></li>
+<li><pre>SELECT Teachers.teacher_name,Students.esimi FROM Teachers RIGHT JOIN Students ON Students.tandau_pani=Teachers.subject WHERE Teachers.subject='Химия';</pre></li>
+<li><pre>SELECT Teachers.teacher_name,Students.esimi FROM Teachers RIGHT JOIN Students ON Students.tandau_pani=Teachers.subject WHERE Teachers.subject='Биология';</pre></li>
+<li><pre>SELECT Teachers.teacher_name,Students.esimi FROM Teachers RIGHT JOIN Students ON Students.tandau_pani=Teachers.subject WHERE Teachers.subject='Информатика';</pre></li>
+<li><pre>SELECT Teachers.teacher_name,Students.esimi FROM Students RIGHT JOIN Teachers ON Teachers.subject=Students.tandau_pani AND Students.jinagan_ball>90;</pre></li>
+<li><pre>SELECT Teachers.teacher_name,Students.esimi FROM Students RIGHT JOIN Teachers ON Teachers.subject=Students.tandau_pani AND Students.sinibi='9A';</pre></li>
+<li><pre>SELECT Teachers.teacher_name,Students.esimi FROM Students RIGHT JOIN Teachers ON Teachers.subject=Students.tandau_pani AND Students.jinisi='F';</pre></li>
+<li><pre>SELECT Teachers.teacher_name,Students.esimi FROM Students RIGHT JOIN Teachers ON Teachers.subject=Students.tandau_pani AND Students.jinisi='M';</pre></li>
+</ol>
+</details>
+<details>
+<summary>DELETE (1-10)</summary>
+<ol>
+<li><pre>DELETE FROM Students WHERE sinibi='9A';</pre></li>
+<li><pre>DELETE FROM Students WHERE tandau_pani='Математика';</pre></li>
+<li><pre>DELETE FROM Students WHERE jinagan_ball&lt;70;</pre></li>
+<li><pre>DELETE FROM Students WHERE jinisi='M';</pre></li>
+<li><pre>DELETE FROM Students WHERE jinagan_ball>95;</pre></li>
+<li><pre>DELETE FROM Students WHERE jinisi='F' AND tandau_pani='Физика';</pre></li>
+<li><pre>DELETE FROM Students WHERE sinibi='10C';</pre></li>
+<li><pre>DELETE FROM Students WHERE jinagan_ball BETWEEN 80 AND 85;</pre></li>
+<li><pre>DELETE FROM Students WHERE tandau_pani='Химия';</pre></li>
+<li><pre>DELETE FROM Students WHERE tandau_pani='Биология';</pre></li>
+</ol>
+</details>
+</body>
+</html>
